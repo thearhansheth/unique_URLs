@@ -20,3 +20,12 @@ with open(filepath2, mode = 'r', encoding = 'utf-8') as file2:
     url_list2 = []
     for i in range (4, len(list2)):
         url_list2.append(list2[i][3])
+
+final_list = []
+for i in url_list1:
+    if i not in final_list:
+        final_list.append(i)
+
+for j in url_list2:
+    if j not in final_list:
+        final_list.append(j)
