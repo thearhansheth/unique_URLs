@@ -29,3 +29,17 @@ for i in url_list1:
 for j in url_list2:
     if j not in final_list:
         final_list.append(j)
+
+
+# repeating processing steps for csv file of followed people
+master_file = "/Users/arhan.sheth/Documents/Codes/DX/Projects/unique_URLs/CMO(Followed_people).csv"
+with open(master_file, mode = 'r', encoding = 'Windows-1252') as file3:
+    merged3 = csv.reader(file3)
+    list3 = list(merged3)
+    url_list3 = []
+    for i in range (1, len(list3)):
+        url_list3.append(list3[i][24])
+
+for x in url_list3:
+    if x not in final_list:
+        final_list.append(x)
